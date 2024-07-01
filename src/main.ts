@@ -1,7 +1,32 @@
-import './style.css'
+type Person = {
+  name: string;
+};
 
-function add(num1: number, num2: number) {
-  return num1 + num2;
+type AdditionFields = {
+  age: number;
+};
+
+function merge<T, U>(objA: T, objB: U) {
+  return Object.assign(objA, objB);
 }
 
-console.log(add(1, 2));
+const merged = merge<Person, AdditionFields>({ name: 'Alisa' }, { age: 28 });
+
+merged.name;
+
+export {};
+console.log(merged);
+
+    
+
+
+
+
+  
+  
+
+
+
+  
+
+
